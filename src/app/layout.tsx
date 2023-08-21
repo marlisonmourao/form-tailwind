@@ -1,4 +1,4 @@
-import { Siderbar } from '@/component/Sidebar'
+import { Siderbar } from '@/components/Sidebar'
 
 import './globals.css'
 import type { Metadata } from 'next'
@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="pt-br" className="antialiased">
       <body className={inter.className}>
         <div className="grid min-h-screen grid-cols-app">
           <Siderbar />

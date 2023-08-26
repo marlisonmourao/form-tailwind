@@ -9,7 +9,7 @@ import {
   SquareStack,
   Users,
 } from '../../../node_modules/lucide-react'
-import { InputControl, InputPrefix, InputRoot } from '../Input'
+import { InputControl, InputPrefix, InputRoot } from '../Form/Input'
 import { Logo } from './Logo'
 import { NavItem } from './NavItem'
 import { Profile } from './Profile'

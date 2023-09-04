@@ -1,10 +1,18 @@
-import { Mail } from '../../node_modules/lucide-react'
+import {
+  Bold,
+  Italic,
+  Link,
+  List,
+  ListOrdered,
+  Mail,
+} from '../../node_modules/lucide-react'
 
 import { SettingsTabs } from '@/components/SettingsTabs'
 import * as Input from '../components/Form/Input'
 import * as FileInput from '@/components/Form/FileInput'
 import { Select } from '@/components/Form/Select'
 import { SelectItem } from '@/components/Form/Select/SelectItem'
+import { TextArea } from '@/components/Form/TextArea'
 
 export default function Home() {
   return (
@@ -145,7 +153,63 @@ export default function Home() {
                 Write a short introduction
               </span>
             </label>
-            <div></div>
+            <div className="space-y-3">
+              <div className="grid grid-cols-2 gap-3">
+                <Select placeholder="" defaultValue="normal">
+                  <SelectItem
+                    value="normal"
+                    defaultChecked
+                    text="Normal Text"
+                  />
+                  <SelectItem value="md" text="Markdown" />
+                </Select>
+
+                <div className="flex items-center gap-1">
+                  <button
+                    type="button"
+                    className="rounded-md p-2 hover:bg-zinc-50"
+                  >
+                    <Bold className="h-4 w-4 text-zinc-500" strokeWidth={3} />
+                  </button>
+
+                  <button
+                    type="button"
+                    className="rounded-md p-2 hover:bg-zinc-50"
+                  >
+                    <Italic className="h-4 w-4 text-zinc-500" strokeWidth={3} />
+                  </button>
+
+                  <button
+                    type="button"
+                    className="rounded-md p-2 hover:bg-zinc-50"
+                  >
+                    <Link className="h-4 w-4 text-zinc-500" strokeWidth={3} />
+                  </button>
+
+                  <button
+                    type="button"
+                    className="rounded-md p-2 hover:bg-zinc-50"
+                  >
+                    <List className="h-4 w-4 text-zinc-500" strokeWidth={3} />
+                  </button>
+
+                  <button
+                    type="button"
+                    className="rounded-md p-2 hover:bg-zinc-50"
+                  >
+                    <ListOrdered
+                      className="h-4 w-4 text-zinc-500"
+                      strokeWidth={3}
+                    />
+                  </button>
+                </div>
+              </div>
+
+              <TextArea
+                id="bio"
+                defaultValue="Hi, I am a developer from Brazil. I am passionate about technology and I am currently studying at the University of São Paulo. I am looking forward to working with you and to collaborate with you to build a great product. I am looking forward to hearing from you. I hope you enjoy my portfolio."
+              />
+            </div>
           </div>
 
           <div className="grid grid-cols-form gap-3 pt-5">
